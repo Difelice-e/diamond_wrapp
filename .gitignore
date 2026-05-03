@@ -32,6 +32,8 @@ pnpm-debug.log*
 *.swp
 *.swo
 
-# Pipeline ephemera
-docs/audit/
-docs/error_screenshots/
+# Pipeline ephemera (kept local — not on GitHub)
+docs/
+brand/
+brand_asset/
+.claude/
