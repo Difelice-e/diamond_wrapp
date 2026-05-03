@@ -1,0 +1,262 @@
+/* =============================================================================
+   Diamond Wrapp — Design Tokens
+   ----------------------------------------------------------------------------
+   Source: brand/guide.md (Phase 1.5). Phase 2 components import this verbatim.
+   Naming convention: SEMANTIC (--color-action-primary), not decorative
+   (--color-pink-500). Decorative aliases live at the bottom for one-off needs.
+   ============================================================================= */
+
+:root {
+  /* --------------------------------------------------------------------------
+     1. Colors — surfaces
+     -------------------------------------------------------------------------- */
+  --color-background-base:    #1A1410;  /* Default page bg, warm-dark */
+  --color-background-raised:  #221B16;  /* Card / surface */
+  --color-background-deep:    #0F0B08;  /* Pre-footer, footer */
+  --color-background-overlay: rgba(15, 11, 8, 0.55);  /* photo scrim */
+
+  /* --------------------------------------------------------------------------
+     1. Colors — text
+     -------------------------------------------------------------------------- */
+  --color-text-display:        #C9A85E;  /* Display H1/H2: lowrider gold */
+  --color-text-display-shadow: #7A5A1F;  /* Drop-shadow on display */
+  --color-text-default:        #F2EBDC;  /* Body, warm cream (NOT pure white) */
+  --color-text-muted:          #A89784;  /* Captions, secondary */
+  --color-text-subtle:         #6B5C4D;  /* Tertiary, fine print */
+  --color-text-inverse:        #1A1410;  /* Text on light surfaces (rare) */
+
+  /* --------------------------------------------------------------------------
+     1. Colors — actions / accent
+     -------------------------------------------------------------------------- */
+  --color-action-primary:         #E63B7C;  /* Hot pink — primary CTA fill */
+  --color-action-primary-hover:   #FF4D8F;
+  --color-action-primary-pressed: #C42964;
+  --color-action-primary-on:      #FFFFFF;  /* Text on primary fill */
+
+  --color-secondary-purple:        #5B2A6B;  /* Filigree base (logo) */
+  --color-secondary-purple-bright: #8B3FA8;  /* Filigree highlight */
+  --color-secondary-purple-tint:   rgba(91, 42, 107, 0.15);
+
+  --color-accent-pink:        var(--color-action-primary);
+  --color-accent-pink-tint:   rgba(230, 59, 124, 0.15);
+  --color-accent-pink-glow:   rgba(230, 59, 124, 0.32);
+
+  /* --------------------------------------------------------------------------
+     1. Colors — borders, focus, status
+     -------------------------------------------------------------------------- */
+  --color-border-subtle:   #2E2520;
+  --color-border-emphasis: #594636;
+  --color-focus-ring:      #FF4D8F;
+
+  --color-status-success: #7AAA48;  /* Mute olive */
+  --color-status-error:   #D14D3F;  /* Warm red */
+  --color-status-warn:    #D9A04E;  /* Warm amber */
+
+  /* --------------------------------------------------------------------------
+     2. Typography — families
+     -------------------------------------------------------------------------- */
+  --font-display: 'Big Shoulders Display', 'Impact', system-ui, sans-serif;
+  --font-body:    'General Sans', system-ui, -apple-system, sans-serif;
+  --font-mono:    'Fragment Mono', 'JetBrains Mono', ui-monospace, monospace;
+  --font-accent:  'UnifrakturMaguntia', serif;  /* Use sparingly — Lavori Firmati only */
+
+  /* --------------------------------------------------------------------------
+     2. Typography — fluid size scale (clamp)
+     -------------------------------------------------------------------------- */
+  --font-size-display-xl:  clamp(3rem,    9vw,   8.5rem);    /* 48 → 136 */
+  --font-size-display:     clamp(2.5rem,  6.5vw, 6rem);      /* 40 → 96  */
+  --font-size-display-s:   clamp(2rem,    4.5vw, 4rem);      /* 32 → 64  */
+  --font-size-heading:     clamp(1.5rem,  2.6vw, 2.25rem);   /* 24 → 36  */
+  --font-size-subheading:  clamp(1.125rem, 1.6vw, 1.375rem); /* 18 → 22  */
+  --font-size-body:        clamp(1rem,    1.1vw, 1.125rem);  /* 16 → 18  */
+  --font-size-caption:     clamp(0.8125rem, 0.9vw, 0.875rem); /* 13 → 14 */
+  --font-size-eyebrow:     clamp(0.6875rem, 0.8vw, 0.75rem); /* 11 → 12  */
+  --font-size-micro:       clamp(0.625rem,  0.7vw, 0.6875rem); /* 10 → 11 */
+
+  /* --------------------------------------------------------------------------
+     2. Typography — weights, line-heights, tracking
+     -------------------------------------------------------------------------- */
+  --font-weight-regular: 400;
+  --font-weight-medium:  500;
+  --font-weight-semibold: 600;
+  --font-weight-bold:    700;
+  --font-weight-black:   800;
+
+  --line-height-display:    0.92;
+  --line-height-display-h2: 0.95;
+  --line-height-heading:    1.05;
+  --line-height-pullquote:  1.35;
+  --line-height-body:       1.55;
+  --line-height-caption:    1.40;
+  --line-height-eyebrow:    1.20;
+
+  --tracking-display-xl:   -0.02em;
+  --tracking-display:      -0.015em;
+  --tracking-display-s:    -0.01em;
+  --tracking-heading:      -0.005em;
+  --tracking-body:          0em;
+  --tracking-body-large:    0.005em;
+  --tracking-eyebrow:       0.04em;
+  --tracking-caption:       0.04em;
+  --tracking-id:            0.08em;     /* paired with text-transform: uppercase */
+
+  /* --------------------------------------------------------------------------
+     3. Spacing (4px grid)
+     -------------------------------------------------------------------------- */
+  --space-1:  0.25rem;   /*  4px */
+  --space-2:  0.5rem;    /*  8px */
+  --space-3:  0.75rem;   /* 12px */
+  --space-4:  1rem;      /* 16px */
+  --space-5:  1.25rem;   /* 20px */
+  --space-6:  1.5rem;    /* 24px */
+  --space-8:  2rem;      /* 32px */
+  --space-10: 2.5rem;    /* 40px */
+  --space-12: 3rem;      /* 48px */
+  --space-16: 4rem;      /* 64px */
+  --space-20: 5rem;      /* 80px */
+  --space-24: 6rem;      /* 96px */
+  --space-32: 8rem;      /* 128px */
+
+  /* --------------------------------------------------------------------------
+     4. Radii
+     -------------------------------------------------------------------------- */
+  --radius-none: 0;
+  --radius-sm:   0.25rem;   /*  4px — sticker-block CTA */
+  --radius-md:   0.5rem;    /*  8px — default cards, inputs */
+  --radius-lg:   1rem;      /* 16px — Lavori Firmati cards */
+  --radius-xl:   1.5rem;    /* 24px — pre-footer hero card */
+  --radius-pill: 999px;     /* tag chips only */
+
+  /* --------------------------------------------------------------------------
+     5. Shadows (hierarchy — never uniform across element classes)
+     -------------------------------------------------------------------------- */
+  --shadow-raised:
+    0 1px 2px rgba(0, 0, 0, 0.4),
+    0 4px 12px rgba(0, 0, 0, 0.25);
+
+  --shadow-floating:
+    0 8px 24px rgba(0, 0, 0, 0.5),
+    0 2px 6px rgba(0, 0, 0, 0.3);
+
+  --shadow-brand:
+    0 8px 28px rgba(230, 59, 124, 0.32),
+    0 2px 6px rgba(230, 59, 124, 0.18);
+
+  --shadow-deep:
+    0 16px 48px rgba(0, 0, 0, 0.6);
+
+  --shadow-focus-ring:
+    0 0 0 3px rgba(255, 77, 143, 0.5);
+
+  /* --------------------------------------------------------------------------
+     6. Motion — easing + durations
+     -------------------------------------------------------------------------- */
+  --ease-house:     cubic-bezier(0.16, 1, 0.3, 1);   /* narrative / scroll */
+  --ease-state:     cubic-bezier(0.6, 0, 0.4, 1);    /* hover / focus */
+  --ease-linear:    linear;                          /* marquee only */
+
+  --duration-micro:    200ms;
+  --duration-state:    400ms;
+  --duration-reveal:   600ms;
+  --duration-load:     1200ms;
+  --duration-marquee:  40s;
+
+  --stagger-default:   80ms;
+
+  /* --------------------------------------------------------------------------
+     7. Layout
+     -------------------------------------------------------------------------- */
+  --layout-max-width:    1280px;
+  --layout-max-prose:    65ch;
+  --layout-padding-x:    clamp(1.25rem, 4vw, 4rem);
+  --layout-padding-y:    clamp(3rem,    6vw, 6rem);
+  --layout-section-gap:  clamp(4rem,    8vw, 10rem);
+
+  /* --------------------------------------------------------------------------
+     8. Breakpoints (referenced from JS via getComputedStyle if needed)
+     -------------------------------------------------------------------------- */
+  --bp-sm:  480px;
+  --bp-md:  768px;
+  --bp-lg:  1024px;
+  --bp-xl:  1280px;
+  --bp-2xl: 1600px;
+
+  /* --------------------------------------------------------------------------
+     9. Z-index scale
+     -------------------------------------------------------------------------- */
+  --z-base:     0;
+  --z-raised:   10;
+  --z-sticky:   100;     /* nav, sticky-scroll pinned cards */
+  --z-overlay:  500;     /* mobile menu, modals */
+  --z-toast:    900;
+  --z-max:      9999;
+
+  /* --------------------------------------------------------------------------
+     10. Decorative layer (small, only for unusual one-off needs)
+     -------------------------------------------------------------------------- */
+  --color-gold-light:  #C9A85E;
+  --color-gold-deep:   #7A5A1F;
+  --color-purple-deep: #5B2A6B;
+  --color-purple-bright: #8B3FA8;
+  --color-pink-hot:    #E63B7C;
+  --color-cream:       #F2EBDC;
+}
+
+/* =============================================================================
+   Accessibility overrides — at the token layer, not per-component
+   ============================================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --duration-micro:   0ms;
+    --duration-state:   0ms;
+    --duration-reveal:  0ms;
+    --duration-load:    0ms;
+    --duration-marquee: 0s;
+    --stagger-default:  0ms;
+    --ease-house:       step-end;
+    --ease-state:       step-end;
+    --ease-linear:      step-end;
+  }
+
+  /* Marquee falls back to a static graphic */
+  [data-marquee] {
+    animation-play-state: paused !important;
+  }
+}
+
+@media (prefers-reduced-transparency: reduce) {
+  :root {
+    /* Glass surfaces fall back to solid bg */
+    --color-background-overlay:  var(--color-background-deep);
+    --color-accent-pink-tint:    transparent;
+    --color-accent-pink-glow:    transparent;
+    --color-secondary-purple-tint: transparent;
+  }
+}
+
+@media (prefers-contrast: more) {
+  :root {
+    --color-text-default:  #FFFBF0;
+    --color-text-muted:    #D4C5AE;
+    --color-text-subtle:   #95826E;
+    --color-border-subtle: #594636;
+    --color-border-emphasis: #8B7560;
+    --color-focus-ring:    #FFFBF0;
+  }
+}
+
+/* =============================================================================
+   Color-scheme hint (default dark — site is dark-themed)
+   ============================================================================= */
+:root {
+  color-scheme: dark;
+}
+
+/* =============================================================================
+   Selection
+   ============================================================================= */
+::selection {
+  background: var(--color-accent-pink);
+  color: var(--color-action-primary-on);
+}
