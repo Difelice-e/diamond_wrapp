@@ -216,7 +216,7 @@ export function LavoriFirmatiSticky() {
     <section id="lavori" className="section bg-bg-base relative">
       <div className="container-layout">
         <div className="max-w-3xl mb-16 lg:mb-24">
-          <SectionEyebrow index="04" accent>
+          <SectionEyebrow index="05" accent>
             Lavori Firmati
           </SectionEyebrow>
           <h2 className="h-display mt-4">

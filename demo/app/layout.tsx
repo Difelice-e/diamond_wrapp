@@ -3,6 +3,7 @@ import { Big_Shoulders, Fragment_Mono, UnifrakturMaguntia } from 'next/font/goog
 import './globals.css';
 
 import { asset } from '@/lib/asset';
+import { ChatWidget } from '@/components/ChatWidget';
 const bigShoulders = Big_Shoulders({
   subsets: ['latin'],
   variable: '--font-big-shoulders',
@@ -55,7 +56,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           rel="stylesheet"
         />
       </head>
-      <body>{children}</body>
+      <body>{children}<ChatWidget /></body>
     </html>
   );
 }

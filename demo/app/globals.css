@@ -176,6 +176,63 @@ img, svg {
     opacity: 1;
     transform: translateY(0);
   }
+
+  /* ===========================================================================
+     ChatWidget — typing indicator, blinking caret, message entry, custom
+     scrollbar. Kept here (not co-located) so the @layer ordering matches the
+     rest of the brand utilities and tokens drive every value.
+     =========================================================================== */
+  @keyframes chat-typing-bounce {
+    0%, 60%, 100% { transform: translateY(0); opacity: 0.45; }
+    30%           { transform: translateY(-4px); opacity: 1; }
+  }
+  .chat-typing-dot {
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border-radius: 999px;
+    background: var(--color-action-primary);
+    animation: chat-typing-bounce 1.05s var(--ease-house) infinite;
+  }
+
+  @keyframes chat-caret-blink {
+    0%, 49%   { opacity: 1; }
+    50%, 100% { opacity: 0; }
+  }
+  .chat-caret {
+    display: inline-block;
+    width: 0.5ch;
+    height: 1em;
+    margin-left: 2px;
+    vertical-align: -0.15em;
+    background: var(--color-action-primary);
+    animation: chat-caret-blink 0.9s steps(2, end) infinite;
+  }
+
+  @keyframes chat-msg-in {
+    from { opacity: 0; transform: translateY(6px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  .chat-msg-in {
+    animation: chat-msg-in var(--duration-state) var(--ease-house) both;
+  }
+
+  .chat-scroll {
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-border-subtle) transparent;
+  }
+  .chat-scroll::-webkit-scrollbar { width: 6px; }
+  .chat-scroll::-webkit-scrollbar-track { background: transparent; }
+  .chat-scroll::-webkit-scrollbar-thumb {
+    background: var(--color-border-subtle);
+    border-radius: 999px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .chat-typing-dot { animation: none; opacity: 0.7; }
+  .chat-caret      { animation: none; opacity: 0.7; }
+  .chat-msg-in     { animation: none; }
 }
 
 /* =============================================================================
@@ -183,7 +240,7 @@ img, svg {
    ============================================================================= */
 
 :focus-visible {
-  outline: 2px solid var(--color-focus-ring);
+  outline: none;
   outline-offset: 3px;
   border-radius: 2px;
 }

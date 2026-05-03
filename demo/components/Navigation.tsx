@@ -61,7 +61,7 @@ export function Navigation() {
         <div className="container-layout flex h-[var(--nav-h,72px)] items-center justify-between gap-6">
           <a href="/" className="block group" aria-label="Diamond Wrapp — homepage">
             <Image
-              src={asset('/logo-transparent.png')}
+              src={asset('/logo.png')}
               alt="Diamond Wrapp"
               width={800}
               height={272}
@@ -118,7 +118,7 @@ export function Navigation() {
         >
           <div className="container-layout flex h-[var(--nav-h,72px)] items-center justify-between border-b border-border-subtle">
             <Image
-              src={asset('/logo-transparent.png')}
+              src={asset('/logo.png')}
               alt="Diamond Wrapp"
               width={800}
               height={272}

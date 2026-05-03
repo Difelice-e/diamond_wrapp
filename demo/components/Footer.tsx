@@ -60,7 +60,7 @@ export function Footer() {
             signature rather than a billboard (per human review feedback). */}
         <div className="mb-14 lg:mb-16 flex justify-center">
           <Image
-            src={asset('/logo-transparent.png')}
+            src={asset('/logo.png')}
             alt="Diamond Wrapp"
             width={800}
             height={272}

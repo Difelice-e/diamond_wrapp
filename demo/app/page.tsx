@@ -6,6 +6,7 @@ import { HeroPosterStack } from '@/components/HeroPosterStack';
 import { MarqueeStrip } from '@/components/MarqueeStrip';
 import { ServiziCarousel } from '@/components/ServiziCarousel';
 import { StatsBlock } from '@/components/StatsBlock';
+import { WrapSimulator } from '@/components/WrapSimulator';
 import { LavoriFirmatiSticky } from '@/components/LavoriFirmatiSticky';
 import { WorkshopSplit } from '@/components/WorkshopSplit';
 import { PrefooterCTA } from '@/components/PrefooterCTA';
@@ -20,6 +21,7 @@ export default function Home() {
         <MarqueeStrip />
         <ServiziCarousel />
         <StatsBlock />
+        <WrapSimulator />
         <MarqueeStrip reverse />
         <LavoriFirmatiSticky />
         <WorkshopSplit />

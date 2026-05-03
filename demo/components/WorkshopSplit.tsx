@@ -59,7 +59,7 @@ export function WorkshopSplit() {
         </div>
 
         <RevealOnView className="lg:col-span-5">
-          <SectionEyebrow index="05" accent>
+          <SectionEyebrow index="06" accent>
             Dietro il vetro
           </SectionEyebrow>
 
