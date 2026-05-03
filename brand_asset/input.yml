@@ -1,0 +1,70 @@
+# Brand Brief — diamond_wrapp
+# Fill the fields below, then re-run: /web-pipeline brand-init
+# Lines starting with # are comments. Remove them once filled.
+# Required fields: name, type, locale.
+
+# --- Identity ---
+name: ""                 # Brand name as it appears to customers
+type: ""                 # Activity type (e.g. "Car Wrapping", "Auto Detailing", "Aparthotel")
+                         # Be honest — describe the REAL business, not a marketing label.
+                         # Hybrid businesses → name both (e.g. "Wrapping + Detailing").
+
+# --- Stack (optional) ---
+# stack: astro           # Default. Use 'next' only with explicit technical reason
+                         # (site-wide motion orchestration, heavy interactivity, etc.)
+
+# --- Locale ---
+locale:
+  language: ""           # ISO code: "it", "en", "it-IT"
+  city: ""               # City for local SEO + competitor research
+  country: ""            # Country for legal pages (privacy/cookie/GDPR)
+
+# --- Visual ---
+logo_path: ""            # Relative path inside brand_asset/, e.g. "logo.svg"
+                         # If no logo yet, leave empty — Phase 1 will flag.
+
+colors:                  # If the client has brand colors, list them. Otherwise leave empty
+                         # and Phase 1 will derive a palette from research + visual ground truth.
+  primary: ""            # e.g. "#1A1A1A"
+  secondary: ""
+  accent: ""
+
+# --- Positioning ---
+philosophy: |            # Free-form. Mission / vision / values / what the business stands for.
+                         # The more concrete and specific, the better. Avoid corporate filler
+                         # ("eccellenza", "passione", "innovazione") — write how the owner
+                         # would describe the business to a customer at the counter.
+
+# --- Non-negotiable client requests ---
+extra_requests:          # List specific demands. These OVERRIDE defaults.
+                         # Examples:
+                         #   - "No contact form — WhatsApp only"
+                         #   - "Must show before/after gallery prominently"
+                         #   - "No Google Maps embed — privacy concern"
+                         #   - "Single primary CTA: book a consultation call"
+  - ""
+
+# --- Audience ---
+target_customers: |      # Who buys / books / contacts? Be specific.
+                         # "B2C car owners 25-45 in Milan area looking for premium wraps"
+                         # beats "everyone who needs a wrap".
+
+# --- Competitors (optional but useful) ---
+known_competitors:       # URLs or names the client mentioned, or you already know
+  - ""
+
+# --- References (optional) ---
+liked_sites:             # URLs the client said they liked. Saved as visual anchors.
+  - ""
+disliked_sites:          # URLs the client explicitly rejected. Equally informative.
+  - ""
+
+# --- Photos (filled in Phase 0 step 6 by the model) ---
+# photos_inventory:      # Auto-generated once photos/ is populated.
+#   hero:
+#   products:
+#   gallery:
+
+# --- Existing site (if any) ---
+existing_site_url: ""    # If migrating from an old site, paste the URL.
+                         # Phase 0 will Lighthouse it as a baseline.
